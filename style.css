@@ -1,0 +1,231 @@
+body {
+    font-family: 'Segoe UI';
+    background-color: #383838;
+    font-weight: 100;
+    user-select: none;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    min-height: 10vh;
+    align-items: center;
+    margin: auto;
+    border-radius: 40px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+h1 {
+    color: #a3a3a2;
+    text-shadow: 5px 5px 10px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.nav-links, h1 {
+    flex: 1;
+} 
+
+li a:hover:not(.active) {
+    background-color: #8888b9;
+    color: white;
+    transition: 0.7s;
+}
+
+.active {
+    background-color: #808283;
+    color: white;
+}
+
+a {
+    display: block;
+    color: #dfdfdf;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 20000px;
+}
+
+.centriranje {
+    width: 40%;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    margin-left: -20%;
+    margin-top: -50px;
+}
+
+
+#p1 {
+    text-align: center;
+    color: white;
+    font-size: 20pt;
+    font-family: 'Times New Roman';
+}
+
+#p2 {
+    text-align: right;
+    color: white;
+    font-family: 'Times New Roman';
+    font-size: 16pt;
+    font-style: italic;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+.fade-in {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-timing-function: ease-in;
+    animation-duration: 3s;
+}
+
+.fade-in2 {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-timing-function: ease-in;
+    animation-duration: 4s;
+}
+
+.fade-in3 {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-timing-function: ease-in;
+    animation-duration: 6s;
+}
+
+.fadeInAndOut {
+    animation-fill-mode: both;
+    animation-duration: 6s;
+    animation-delay: 1s;
+    animation-name: fade;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-20px);
+    }
+    25% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+    75% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateX(20px);
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    right: 5px;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0);
+}
+
+#bgVideo {
+    position: fixed;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    /*filter: blur(8px); */
+    filter: grayscale(60%);
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    margin-top: 6%;
+}
+
+.mySlides {
+    display: none;
+}
+
+.slideImg {
+    border-radius: 20px;
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Style the links inside the sidenav */
+
+#mySidenav  {
+    background-color: #585858;
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    /* Position them relative to the browser window */
+    left: -80px;
+    /* Position them outside of the screen */
+    transition: 0.3s;
+    /* Add transition on hover */
+    padding: 15px;
+    /* 15px padding */
+    width: 100px;
+    /* Set a specific width */
+    height: 500px;
+    text-decoration: none;
+    /* Remove underline */
+    font-size: 20px;
+    /* Increase font size */
+    color: white;
+    /* White text color */
+    border-radius: 0 20px 20px 0;
+    /* Rounded corners on the top right and bottom right side */
+}
+
+#mySidenav a, #mySidenav p, #mySidenav hr {
+    display: none;
+    position: relative;
+    top: 30%;
+}
+#mySidenav:hover a, #mySidenav:hover p, #mySidenav:hover hr{
+    display: block;
+}
+
+#mySidenav:hover {
+    left: 0;
+}
+
+.sideA:hover{
+    background-color: #dc54f7;
+}
+
+iframe{
+    border-radius: 5px;
+}
+
+.container{
+    display: flex;
+    width: 40%;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    margin-left: -20%;
+    margin-top: -50px;
+}
+
+.block{
+    width: 100%;
+    margin-left: -15%;
+    margin-right: 30%;
+}
