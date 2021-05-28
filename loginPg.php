@@ -39,9 +39,9 @@ session_start();
         <div class="centriranje">
             <form method="POST" action="login.php" style="text-align: center;">
                 <h2>Login</h2>
-                <input type="text" name="username" placeholder="Username">
+                <input type="text" name="username" placeholder="Username" required>
                 <br> <br>
-                <input type="password" name="password" placeholder="Password">
+                <input type="password" name="password" placeholder="Password" required>
                 <br> <br>
                 <button type="submit" name="login">Login</button>
                 <br> <br> <br>

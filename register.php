@@ -2,7 +2,7 @@
     require_once("connect.php");
     session_start();
 
-    if(isset($_POST['ime']) && isset($_POST['prezime']) && isset($_POST['username']) && isset($_POST['password'])){
+    if(!empty($_POST['ime']) && !empty($_POST['prezime']) && !empty($_POST['username']) && !empty($_POST['password'])){
         $username = $_POST['username'];
         $password = $_POST['password'];
         $password = md5($password);
@@ -17,5 +17,7 @@
 
         $stmt->execute();
         header('Location: loginPg.php');
+    }else {
+        header('Location: registerPg.php');
     }
 ?>

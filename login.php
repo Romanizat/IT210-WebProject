@@ -5,7 +5,7 @@
     $password = $_POST["password"];
     $password = md5($password);
     
-    if(isset($_POST['username']) && isset($_POST['password'])){
+    if(!empty($_POST['username']) && !empty($_POST['password'])){
         $stmt = $con->prepare("SELECT * FROM korisnik WHERE username=:username AND password=:password");
         $stmt->bindParam(":username", $username);
         $stmt->bindParam(":password",$password);
@@ -22,5 +22,7 @@
         else {
             header('Location: loginPg.php');
         }
+    }else {
+        header('Location: loginPg.php');
     }
 ?>
