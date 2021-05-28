@@ -275,17 +275,20 @@ iframe{
     /*height: 30px;*/
 }
 
-.umetnici ul {
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 40%;
-}
-  
-.umetnici ul li {
-    list-style: none;
-    flex: 0 0 33.333333%;
+/*.grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}*/
+
+.grid-item{
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
 }
 
 .umetniciPic{
-    width: 300px;
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.5);
 }

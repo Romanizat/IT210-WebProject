@@ -73,20 +73,13 @@ session_start();
     echo "<center><h2 style='margin-bottom: 15px'>Umetnici</h2></center>";
     echo "<hr>";
     while ($row = $result->fetch()) {
-        echo "<div class='umetnici'>
-                <ul>
-                    <li>
-                          
-                            <img class='umetniciPic' src='" . $row["slika"] . "'/>
-
-
-                            <h2 class='li-head'>" . $row["scensko_ime"] ."</h2>
-                            <p class='li-sub'>" . $row["ime"] ." ". $row["prezime"] ."</p>
-                            <p class='li-sub'>" . $row["zemlja"] ."</p>
-
-                    </li>
-                </ul>
-            </div>
+        echo "<div class='grid'>
+                <div class='grid-item'>
+                  <img class='umetniciPic' src='" . $row["slika"] . "'/>
+                  <h2 class='li-head'>" . $row["scensko_ime"] ."</h2>
+                  <p class='li-sub'>" . $row["ime"] ." ". $row["prezime"] ."</p>
+                  <p class='li-sub'>" . $row["zemlja"] ."</p>
+                </div>
         </div>";
     }
   ?>
