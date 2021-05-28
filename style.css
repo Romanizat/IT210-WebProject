@@ -245,7 +245,7 @@ iframe{
     /* 15px padding */
     width: 100px;
     /* Set a specific width */
-    height: 500px;
+    height: 580px;
     text-decoration: none;
     /* Remove underline */
     font-size: 20px;
@@ -273,4 +273,19 @@ iframe{
 .svg{
     width: 50px;
     /*height: 30px;*/
+}
+
+.umetnici ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 40%;
+}
+  
+.umetnici ul li {
+    list-style: none;
+    flex: 0 0 33.333333%;
+}
+
+.umetniciPic{
+    width: 300px;
 }

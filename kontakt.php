@@ -28,12 +28,9 @@
         <h1 onclick="playAudio()" ondblclick="pauseAudio()">Umami 🌴</h1>
         <ul class="nav-links">
             <li><a href="index.php">Početna</a></li>
-            <li><a href="">filler</a></li>
-            <li><a href="">filler</a></li>
-            <li><a href="">filler</a></li>
-            <li><a href="">filler</a></li>
+            <li><a href="events.php">Events</a></li>
+            <li><a href="umetnici.php">Umetnici</a></li>
             <li><a class="active" href="kontakt.php">Kontakt</a></li>
-            <li><a href="">filler</a></li>
         </ul>
     </nav>
 
@@ -54,17 +51,18 @@
     $ime = $_SESSION['ime'];
     $string = "
       <div id=\"mySidenavB\" class=\"sidenav\">
-          <p>Welcome</p>
           <p>$ime</p>
           <hr>
           <a class=\"sideA\" href=\"#\"><img src=\"resources/12-120181_png-file-ticket-icon-svg.png\" class=\"svg\" alt=\"tickets\"></a>
           <hr>
-          <a class=\"sideA\" href=\"#\"><img src=\"resources/person-icon-1682.png\" class=\"svg\" alt=\"person\"></a>";
+          <a class=\"sideA\" href=\"#\"><img src=\"resources/person-icon-1682.png\" class=\"svg\" alt=\"person\"></a>
+          <hr>
+          <a class=\"sideA\" href=\"#\"><img src=\"resources/Simpleicons_Places_map-marker-1.svg\" class=\"svg\" alt=\"person\"></a>";
 
     $admin = $_SESSION['admin'];
     if ($admin == 1) {
       $string=$string."<hr>
-          <a class=\"sideA\" href=\"adminPanel.php\">Admin<br>Panel</a>";
+          <a class=\"sideA\" href=\"adminPanel.php\">Admin Panel</a>";
     }
     $string=$string."   
       <hr>
@@ -73,7 +71,7 @@
     echo $string;
   }
 
-  ?> 
+  ?>
 
     <hr>
     
