@@ -39,13 +39,13 @@
         <div class="centriranje">
             <form method="POST" action="register.php" style="text-align: center;">
                 <h2>Registracija</h2>
-                <input type="text" name="username" placeholder="Username" >
+                <input type="text" name="username" placeholder="Username" required>
                 <br> <br>
-                <input type="password" name="password" placeholder="Password" >
+                <input type="password" name="password" placeholder="Password" required>
                 <br> <br>
-                <input type="text" name="ime" placeholder="Ime" >
+                <input type="text" name="ime" placeholder="Ime" required>
                 <br> <br>
-                <input type="text" name="prezime" placeholder="Prezime" >
+                <input type="text" name="prezime" placeholder="Prezime" required>
                 <br> <br>
                 <button type="submit" name="register">Register</button>
                 <br> <br> <br>
