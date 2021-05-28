@@ -70,7 +70,6 @@ session_start();
   <?php
     $sql = "SELECT * FROM izvodjac";
     $result = $con->query($sql);
-    echo "<center><h2 style='margin-bottom: 15px'>Umetnici</h2></center>";
     echo "<hr>";
     while ($row = $result->fetch()) {
         echo "<div class='grid'>

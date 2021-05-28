@@ -22,17 +22,14 @@
     <video autoplay muted loop id="bgVideo" src="resources/Pexels Videos 2759484.mp4" type="video/mp4">
     </video>
     <nav>
-        <h1 onclick="playAudio()" ondblclick="pauseAudio()">Umami 🌴</h1>
-        <ul class="nav-links">
-            <li><a href="index.php">Početna</a></li>
-            <li><a href="">filler</a></li>
-            <li><a href="">filler</a></li>
-            <li><a href="">filler</a></li>
-            <li><a href="">filler</a></li>
-            <li><a href="kontakt.php">Kontakt</a></li>
-            <li><a href="">filler</a></li>
-        </ul>
-    </nav>
+    <h1 onclick="playAudio()" ondblclick="pauseAudio()">Umami 🌴</h1>
+    <ul class="nav-links">
+      <li><a href="index.php">Početna</a></li>
+      <li><a href="events.php">Events</a></li>
+      <li><a href="umetnici.php">Umetnici</a></li>
+      <li><a href="kontakt.php">Kontakt</a></li>
+    </ul>
+  </nav>
 
     
     <?php if(empty($_SESSION['username'])){?>
