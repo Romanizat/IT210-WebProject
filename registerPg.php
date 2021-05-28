@@ -1,6 +1,6 @@
 <?php
-require_once("connect.php");
-session_start();
+    require_once("connect.php");
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -37,15 +37,19 @@ session_start();
     
     <?php if(empty($_SESSION['username'])){?>
         <div class="centriranje">
-            <form method="POST" action="login.php" style="text-align: center;">
-                <h2>Login</h2>
+            <form method="POST" action="register.php" style="text-align: center;">
+                <h2>Registracija</h2>
                 <input type="text" name="username" placeholder="Username">
                 <br> <br>
                 <input type="password" name="password" placeholder="Password">
                 <br> <br>
-                <button type="submit" name="login">Login</button>
+                <input type="text" name="ime" placeholder="Ime">
+                <br> <br>
+                <input type="text" name="prezime" placeholder="Prezime">
+                <br> <br>
+                <button type="submit" name="register">Register</button>
                 <br> <br> <br>
-                <a href="registerPg.php" class="sideA" style="text-align: center; font-size: 30px;" >Nemate nalog? Registrujte se!</a>
+                <a href="loginPg.php" class="sideA" style="text-align: center; font-size: 30px;" >Imate nalog? Prijavite se!</a>
             </form>
         </div>
     <?php }?>
@@ -53,10 +57,8 @@ session_start();
     <!-- Vidljivo samo ako logged in -->
     <?php if(!empty($_SESSION['username'])){?>
         <div class="centriranje">
-            <h3 style="font-size: 25px;">Hello <?php echo $_SESSION['username'];?></h3>
-            <form method="POST" action="logout.php">
-                <input type="submit" value="Log Out" class="sideA" style="font-size: 20px;" name="logout">
-            </form>
+            <h3 style="font-size: 25px; text-align: center;">Hello <?php echo $_SESSION['username'];?> <br> Već ste ulogovani!</h3>
+            <a href="index.php" class="sideA" style="text-align: center; font-size: 30px;" >Povratak na početak</a>
         </div>
     <?php }?>
 

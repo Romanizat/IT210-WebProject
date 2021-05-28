@@ -3,7 +3,7 @@
     session_start();
     $username = $_POST["username"];
     $password = $_POST["password"];
-    //$password = md5($password);
+    $password = md5($password);
     
     if(isset($_POST['username']) && isset($_POST['password'])){
         $stmt = $con->prepare("SELECT * FROM korisnik WHERE username=:username AND password=:password");
