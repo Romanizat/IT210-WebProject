@@ -43,7 +43,7 @@
     <?php
     if(empty($_SESSION['username'])) {
       echo("
-      <div id=\"mySidenav\" class=\"sidenav\">
+      <div id=\"mySidenavA\" class=\"sidenav\">
           <a class=\"sideA\" href=\"loginPg.php\">Login</a>
           <hr>
           <a class=\"sideA\" href=\"registerPg.php\" >Register</a>
@@ -53,7 +53,7 @@
     if(!empty($_SESSION['username'])) {
       $ime = $_SESSION['ime'];
       echo(" 
-      <div id=\"mySidenav\" class=\"sidenav\">
+      <div id=\"mySidenavB\" class=\"sidenav\">
           <p>Welcome</p>
           <p>$ime</p>
           <hr>

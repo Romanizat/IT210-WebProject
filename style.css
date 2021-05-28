@@ -167,7 +167,7 @@ footer {
 
 /* Style the links inside the sidenav */
 
-#mySidenav  {
+#mySidenavA  {
     background-color: #585858;
     position: absolute;
     text-align: center;
@@ -192,16 +192,16 @@ footer {
     /* Rounded corners on the top right and bottom right side */
 }
 
-#mySidenav a, #mySidenav p, #mySidenav hr {
+#mySidenavA a, #mySidenavA p, #mySidenavA hr {
     display: none;
     position: relative;
     top: 30%;
 }
-#mySidenav:hover a, #mySidenav:hover p, #mySidenav:hover hr{
+#mySidenavA:hover a, #mySidenavA:hover p, #mySidenavA:hover hr{
     display: block;
 }
 
-#mySidenav:hover {
+#mySidenavA:hover {
     left: 0;
 }
 
@@ -228,4 +228,49 @@ iframe{
     width: 100%;
     margin-left: -15%;
     margin-right: 30%;
+}
+
+
+#mySidenavB  {
+    background-color: #585858;
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    /* Position them relative to the browser window */
+    left: -80px;
+    /* Position them outside of the screen */
+    transition: 0.3s;
+    /* Add transition on hover */
+    padding: 15px;
+    /* 15px padding */
+    width: 100px;
+    /* Set a specific width */
+    height: 500px;
+    text-decoration: none;
+    /* Remove underline */
+    font-size: 20px;
+    /* Increase font size */
+    color: white;
+    /* White text color */
+    border-radius: 0 20px 20px 0;
+    /* Rounded corners on the top right and bottom right side */
+}
+
+#mySidenavB a, #mySidenavB p, #mySidenavB hr {
+    display: none;
+    position: relative;
+    /*top: 0.1%;*/
+    left: -10px;
+}
+#mySidenavB:hover a, #mySidenavB:hover p, #mySidenavB:hover hr{
+    display: block;
+}
+
+#mySidenavB:hover {
+    left: 0;
+}
+
+.svg{
+    width: 50px;
+    /*height: 30px;*/
 }

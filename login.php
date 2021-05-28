@@ -16,7 +16,7 @@
             session_start();
             $_SESSION["username"] = $row["username"];
             $_SESSION["ime"] = $row["ime"];
-            $_SESSION["username"] = $row["username"];
+            $_SESSION["admin"] = $row["admin"];
             header('Location: index.php');
         }
         else {

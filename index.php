@@ -1,7 +1,7 @@
 <?php
-  require_once("connect.php");
-  session_start();
-  /*if(!isset($_SESSION['username'])){
+require_once("connect.php");
+session_start();
+/*if(!isset($_SESSION['username'])){
     $username = $_SESSION['username'];
     $ime = $_SESSION['ime'];
 	}*/
@@ -93,26 +93,41 @@
 
 
   <?php
-    if(empty($_SESSION['username'])) {
-      echo("
-      <div id=\"mySidenav\" class=\"sidenav\">
+  if (empty($_SESSION['username'])) {
+    echo ("
+      <div id=\"mySidenavA\" class=\"sidenav\">
           <a class=\"sideA\" href=\"loginPg.php\">Login</a>
           <hr>
           <a class=\"sideA\" href=\"registerPg.php\" >Register</a>
       </div>
       ");
-    } 
-    if(!empty($_SESSION['username'])) {
-      $ime = $_SESSION['ime'];
-      echo(" 
-      <div id=\"mySidenav\" class=\"sidenav\">
+  }
+  if (!empty($_SESSION['username'])) {
+    $ime = $_SESSION['ime'];
+    $string = "
+      <div id=\"mySidenavB\" class=\"sidenav\">
           <p>Welcome</p>
           <p>$ime</p>
           <hr>
-          <a class=\"sideA\" href=\"logout.php\">Logout</a>
-      </div>
-      ");
-    }?>  
+          <a class=\"sideA\" href=\"#\"><img src=\"resources/12-120181_png-file-ticket-icon-svg.png\" class=\"svg\" alt=\"tickets\"></a>
+          <hr>
+          <a class=\"sideA\" href=\"#\"><img src=\"resources/person-icon-1682.png\" class=\"svg\" alt=\"person\"></a>";
+
+    $admin = $_SESSION['admin'];
+    if ($admin == 1) {
+      $string=$string."<hr>
+          <a class=\"sideA\" href=\"adminPanel.php\">Admin<br>Panel</a>";
+    }
+    $string=$string."   
+      <hr>
+      <a class=\"sideA\" href=\"logout.php\">Logout</a>
+    </div>";
+    echo $string;
+  }
+
+  ?>
+
+
 
 
   <!-- EMPTY TRENUTNO -->
