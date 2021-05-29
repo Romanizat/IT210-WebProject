@@ -14,7 +14,7 @@ if (empty($_SESSION['username'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="resources/favicon.png" />
-    <title>Umami | Rezervacija</title>
+    <title>Umami | Lokacija</title>
 </head>
 
 <body>
@@ -60,34 +60,18 @@ if (empty($_SESSION['username'])) {
         echo $string;
     }
     ?>
-    <hr>
-
-    <?php
-    $sql = "SELECT * FROM event";
-    $query = $con->query($sql);
-    $results = array();
-    while ($results[] = $query->fetch());
-    array_pop($results);
-    ?>
 
     <div class="centriranje">
-        <form method="POST" action="reserve.php" style="text-align: center;">
-            <h2>Rezervišite kartu</h2>
-            <select name="naziv" required>
-                <option value="">Izaberite događaj</option>
-                <?php foreach ($results as $option) { ?>
-                    <option value="<?php echo $option["naziv"]; ?>">
-                        <?php echo $option["naziv"]; ?>
-                    </option>
-                <?php } ?>
-            </select>
-            <br> <br>
-            <input type="number" name="kolicina" placeholder="Koliko karata?" required step=1>
-            <br> <br>
-            <button type="submit" name="reserve">Rezerviši</button>
-            <br> <br>
+        <form method="POST" action="suggest.php" style="text-align: center;">
+            <h2>Predložite novu lokaciju!</h2>
+            <label for="msg">Unesite mesto i državu</label><br><br>
+            <textarea style="resize: none;" name="mesto" cols="50" rows="5" placeholder="Napišite naziv mesta i državu kog biste predložili za sledeći događaj" required></textarea><br><br>
+            <label for="zasto">Zašto?</label><br><br>
+            <textarea style="resize: none;" name="zasto" cols="50" rows="5" placeholder="Zašto baš predlažete ovo mesto?" required></textarea><br><br>
+            <input type="submit" value="Pošalji!">
         </form>
     </div>
+
     <footer>
         <p class="fade-in3">© Marko Josifović 4494</p>
     </footer>

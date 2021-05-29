@@ -22,16 +22,11 @@
     $result2 = $con->query($stmt2);    
     $row2 = $result2->fetch();
     $idEvent = $row2["id"];
-    echo "Event u odovjenu". $idEvent;
 ?>
           
 <?php
     if(($naziv !="") && ($kolicina>0)){
         try{
-        echo "Korisnik ".$idKorisnik;
-        echo "Event ".$idEvent;
-        echo "Kolicina ".$kolicina;
-        
         $stmt = $con->prepare("INSERT INTO rezervacije (kolicina, idKorisnik, idEvent) 
                                 VALUES (:kolicina, :idKorisnik, :idEvent)");
         $stmt->bindParam(":kolicina", $kolicina);

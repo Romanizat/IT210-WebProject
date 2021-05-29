@@ -1,6 +1,7 @@
 <?php
 require_once("connect.php");
 session_start();
+$username=$_SESSION['username'];
 if (empty($_SESSION['username'])) {
     header("Location: index.php");
 }
@@ -14,7 +15,7 @@ if (empty($_SESSION['username'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="resources/favicon.png" />
-    <title>Umami | Rezervacija</title>
+    <title>Umami | Predlog brisanje</title>
 </head>
 
 <body>
@@ -63,28 +64,33 @@ if (empty($_SESSION['username'])) {
     <hr>
 
     <?php
-    $sql = "SELECT * FROM event";
-    $query = $con->query($sql);
+        $sql = "SELECT * FROM korisnik WHERE username='".$username."'";
+        $result = $con->query($sql);
+        $row = $result->fetch();
+        $idKorisnik = $row["id"];
+
+        $sql2 = "SELECT * FROM locationsuggest l WHERE idKorisnik='".$idKorisnik."'";
+
+
+    $query = $con->query($sql2);
     $results = array();
     while ($results[] = $query->fetch());
     array_pop($results);
     ?>
 
     <div class="centriranje">
-        <form method="POST" action="reserve.php" style="text-align: center;">
-            <h2>Rezervišite kartu</h2>
-            <select name="naziv" required>
-                <option value="">Izaberite događaj</option>
+        <form method="POST" action="deleteS.php" style="text-align: center;">
+            <h2>Koji predlog biste obrisali?</h2>
+            <select name="predlog" required>
+                <option value="">Izaberite predlog</option>
                 <?php foreach ($results as $option) { ?>
-                    <option value="<?php echo $option["naziv"]; ?>">
-                        <?php echo $option["naziv"]; ?>
+                    <option value="<?php echo $option["id"]; ?>">
+                        <?php echo $option["mesto"]; ?>
                     </option>
                 <?php } ?>
             </select>
             <br> <br>
-            <input type="number" name="kolicina" placeholder="Koliko karata?" required step=1>
-            <br> <br>
-            <button type="submit" name="reserve">Rezerviši</button>
+            <button type="submit" name="deleteS">Obriši</button>
             <br> <br>
         </form>
     </div>

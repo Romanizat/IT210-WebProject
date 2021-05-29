@@ -57,7 +57,7 @@
           <hr>
           <a class=\"sideA\" href=\"profil.php\"><img src=\"resources/person-icon-1682.png\" class=\"svg\" alt=\"person\"></a>
           <hr>
-          <a class=\"sideA\" href=\"#\"><img src=\"resources/Simpleicons_Places_map-marker-1.svg\" class=\"svg\" alt=\"person\"></a>";
+          <a class=\"sideA\" href=\"location.php\"><img src=\"resources/Simpleicons_Places_map-marker-1.svg\" class=\"svg\" alt=\"person\"></a>";
 
     $admin = $_SESSION['admin'];
     if ($admin == 1) {
