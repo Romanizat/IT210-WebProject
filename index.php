@@ -105,9 +105,9 @@ session_start();
       <div id=\"mySidenavB\" class=\"sidenav\">
           <p>$ime</p>
           <hr>
-          <a class=\"sideA\" href=\"#\"><img src=\"resources/12-120181_png-file-ticket-icon-svg.png\" class=\"svg\" alt=\"tickets\"></a>
+          <a class=\"sideA\" href=\"rezervacijaPg.php\"><img src=\"resources/12-120181_png-file-ticket-icon-svg.png\" class=\"svg\" alt=\"tickets\"></a>
           <hr>
-          <a class=\"sideA\" href=\"#\"><img src=\"resources/person-icon-1682.png\" class=\"svg\" alt=\"person\"></a>
+          <a class=\"sideA\" href=\"profil.php\"><img src=\"resources/person-icon-1682.png\" class=\"svg\" alt=\"person\"></a>
           <hr>
           <a class=\"sideA\" href=\"#\"><img src=\"resources/Simpleicons_Places_map-marker-1.svg\" class=\"svg\" alt=\"person\"></a>";
 
