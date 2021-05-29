@@ -292,3 +292,25 @@ iframe{
     border-radius: 20px;
     box-shadow: 5px 10px rgba(0, 0, 0, 0.5);
 }
+
+.eventPic{
+    width: 600px;
+    border-radius: 20px;
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.umetniciPic2{
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.column{
+    flex: 30%;
+}
+
+.row{
+    margin-top:10%;
+    display: flex;
+    margin-left:12%;
+}

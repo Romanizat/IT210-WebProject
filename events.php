@@ -5,16 +5,18 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="resources/favicon.png" />
-    <title>Umami | Events</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="resources/favicon.png" />
+  <title>Umami | Events</title>
 </head>
+
 <body>
-<audio id="myAudio" loop>
+  <audio id="myAudio" loop>
     <source src="resources/Hot Since 82 - Mr. Drive.mp3" type="audio/mp3">
     Your browser does not support the audio element.
   </audio>
@@ -55,10 +57,10 @@ session_start();
 
     $admin = $_SESSION['admin'];
     if ($admin == 1) {
-      $string=$string."<hr>
+      $string = $string . "<hr>
           <a class=\"sideA\" href=\"adminPanel.php\">Admin Panel</a>";
     }
-    $string=$string."   
+    $string = $string . "   
       <hr>
       <a class=\"sideA\" href=\"logout.php\">Logout</a>
     </div>";
@@ -67,10 +69,29 @@ session_start();
 
   ?>
 
+  <?php
 
-<footer>
+  $sql = "SELECT * FROM event JOIN izvodjac WHERE izvodjac.id=event.izvodjacID";
+  $result = $con->query($sql);
+  echo "<hr>";
+  while ($row = $result->fetch()) {
+    echo "<div class='row'>
+                <div class='column'>
+                    <img class='eventPic' src='" . $row["slikaEvent"] . "'/>
+                    <h2 style=\"text-align: center;\">" . $row["naziv"] . ", " . $row["lokacija"]. "</h2>
+                </div>
+                <div class='grid-item'>
+                  <img class='umetniciPic2' src='" . $row["slika"] . "'/>
+                  <h2 class='li-head'>" . $row["scensko_ime"] . "</h2>
+                </div>
+        </div>";
+  }
+  ?>
+
+  <footer>
     <p class="fade-in3">© Marko Josifović 4494</p>
   </footer>
   <script src=script.js></script>
 </body>
+
 </html>
