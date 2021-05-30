@@ -83,6 +83,7 @@ session_start();
                 <div class='grid-item'>
                   <img class='umetniciPic2' src='" . $row["slika"] . "'/>
                   <h2 class='li-head'>" . $row["scensko_ime"] . "</h2>
+                  <a href='umetnici.php#" . $row["scensko_ime"] . "' class=\"sideA\" style=\"text-align: center; font-size: 30px;\">Detaljnije</a>
                 </div>
         </div>";
   }
@@ -91,6 +92,8 @@ session_start();
   <footer>
     <p class="fade-in3">© Marko Josifović 4494</p>
   </footer>
+
+  <button onclick="topFunction()" id="myBtn">Povratak na vrh</button>
   <script src=script.js></script>
 </body>
 

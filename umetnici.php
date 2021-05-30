@@ -73,7 +73,7 @@ session_start();
     echo "<hr>";
     while ($row = $result->fetch()) {
         echo "<div class='grid'>
-                <div class='grid-item'>
+                <div class='grid-item' id='" . $row["scensko_ime"] . "'>
                   <img class='umetniciPic' src='" . $row["slika"] . "'/>
                   <h2 class='li-head'>" . $row["scensko_ime"] ."</h2>
                   <p class='li-sub'>" . $row["ime"] ." ". $row["prezime"] ."</p>
@@ -87,6 +87,7 @@ session_start();
   <footer>
     <p class="fade-in3">© Marko Josifović 4494</p>
   </footer>
+  <button onclick="topFunction()" id="myBtn">Povratak na vrh</button>
   <script src=script.js></script>
 </body>
 </html>

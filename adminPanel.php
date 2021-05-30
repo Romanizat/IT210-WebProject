@@ -83,7 +83,6 @@ if ($admin != 1) {
 
     ?>
 
-
 <div class="centriranje">
     <!-- nalozi -->
     <h2 id="korisnici">Korisnici</p>
@@ -153,6 +152,7 @@ if ($admin != 1) {
     <footer>
         <p class="fade-in3">© Marko Josifović 4494</p>
     </footer>
+    <button onclick="topFunction()" id="myBtn">Povratak na vrh</button>
     <script src=script.js></script>
 </body>
 

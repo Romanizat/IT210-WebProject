@@ -111,7 +111,7 @@ if (empty($_SESSION['username'])) {
         while ($row = $result->fetch()) {
             echo "<div>
                     <div class='grid-item'>
-                    <p class='li-sub'>\"" . $row["mesto"] ."\"</p>
+                    <p class='li-sub'>" . $row["mesto"] ."</p>
                     <p class='li-sub'>\"" . $row["zasto"]  ."\"</p>
                     </div>
                 </div>";
@@ -126,6 +126,7 @@ if (empty($_SESSION['username'])) {
     <footer>
         <p class="fade-in3">© Marko Josifović 4494</p>
     </footer>
+    <button onclick="topFunction()" id="myBtn">Povratak na vrh</button>
     <script src=script.js></script>
 </body>
 
