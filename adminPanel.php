@@ -39,11 +39,16 @@ if ($admin != 1) {
         </ul>
     </nav>
 
+    <hr>
+
     <h2 style="text-align: center;">Admin Panel</h2>
 
-    <!-- <video autoplay muted loop id="bgVideo" src="resources/Pexels Videos 2759484.mp4" type="video/mp4">
-    </video> -->
+    <img src="resources/pexels-pixabay-159220.jpg" alt="admin_background" class="bgImg">
 
+    <div class="adminButtonsParent">
+        <span class="adminButtons"><a href="adminCreateEvent.php">Dodaj event</a></span>
+        <span class="adminButtons"><a href="adminCreateUmetnik.php">Dodaj umetnika</a></span>
+    </div>
 
 
 
@@ -83,7 +88,7 @@ if ($admin != 1) {
 
     ?>
 
-<div class="centriranje">
+<div class="centriranjeBody">
     <!-- nalozi -->
     <h2 id="korisnici">Korisnici</p>
         <?php

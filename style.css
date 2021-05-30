@@ -145,7 +145,6 @@ footer {
     z-index: -1;
     right: 0;
     bottom: 0;
-    /*filter: blur(8px); */
     filter: grayscale(60%);
 }
 
@@ -165,31 +164,20 @@ footer {
     box-shadow: 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Style the links inside the sidenav */
-
 #mySidenavA  {
     background-color: #585858;
     position: absolute;
     text-align: center;
     top: 30%;
-    /* Position them relative to the browser window */
     left: -80px;
-    /* Position them outside of the screen */
     transition: 0.3s;
-    /* Add transition on hover */
     padding: 15px;
-    /* 15px padding */
     width: 100px;
-    /* Set a specific width */
     height: 500px;
     text-decoration: none;
-    /* Remove underline */
     font-size: 20px;
-    /* Increase font size */
     color: white;
-    /* White text color */
     border-radius: 0 20px 20px 0;
-    /* Rounded corners on the top right and bottom right side */
 }
 
 #mySidenavA a, #mySidenavA p, #mySidenavA hr {
@@ -230,36 +218,25 @@ iframe{
     margin-right: 30%;
 }
 
-
 #mySidenavB  {
     background-color: #585858;
     position: absolute;
     text-align: center;
     top: 30%;
-    /* Position them relative to the browser window */
     left: -80px;
-    /* Position them outside of the screen */
     transition: 0.3s;
-    /* Add transition on hover */
     padding: 15px;
-    /* 15px padding */
     width: 100px;
-    /* Set a specific width */
     height: 580px;
     text-decoration: none;
-    /* Remove underline */
     font-size: 20px;
-    /* Increase font size */
     color: white;
-    /* White text color */
-    border-radius: 0 20px 20px 0;
-    /* Rounded corners on the top right and bottom right side */
+    border-radius: 0 20px 20px 0;    
 }
 
 #mySidenavB a, #mySidenavB p, #mySidenavB hr {
     display: none;
     position: relative;
-    /*top: 0.1%;*/
     left: -10px;
 }
 #mySidenavB:hover a, #mySidenavB:hover p, #mySidenavB:hover hr{
@@ -272,14 +249,8 @@ iframe{
 
 .svg{
     width: 50px;
-    /*height: 30px;*/
 }
 
-/*.grid{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 10px;
-}*/
 
 .grid-item{
     padding: 20px;
@@ -316,21 +287,78 @@ iframe{
 }
 
 #myBtn {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
-    left: 15px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color: #dc54f7; /* Set a background color */
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 15px; /* Increase font size */
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    left: 15px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #dc54f7;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 15px;
   }
   
-  #myBtn:hover {
-    background-color: #555; 
-  }
+#myBtn:hover {
+background-color: #555; 
+}
+
+span.adminButtons{
+    display: inline-block;
+    border: none;
+    outline: none;
+    background-color: #dc54f7;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-right: 200px;
+}
+
+span.adminButtons:hover{
+    background-color: #555;
+}
+.adminButtonsParent{
+    position: absolute;
+    left: 32%;
+}
+
+.bgImg{
+    z-index: -1;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    filter: blur(12px) grayscale(70%);
+}
+
+.centriranjeBody{
+    width: 40%;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    margin-left: -20%;
+    margin-top: -50px;
+    font-weight: bold;
+    font-size: 18pt;
+}
+
+.centriranjeBody2{
+    width: 40%;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 22%;
+    margin-left: -20%;
+    margin-top: -50px;
+    font-weight: bold;
+    font-size: 18pt;
+}

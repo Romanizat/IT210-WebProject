@@ -82,7 +82,7 @@ if (empty($_SESSION['username'])) {
             <select name="predlog" required>
                 <option value="">Izaberite predlog</option>
                 <?php foreach ($results as $option) { ?>
-                    <option value="<?php echo $option["id"]; ?>">
+                    <option value="<?php echo $option["idL"]; ?>">
                         <?php echo $option["mesto"]; ?>
                     </option>
                 <?php } ?>

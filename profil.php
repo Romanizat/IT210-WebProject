@@ -64,7 +64,7 @@ if (empty($_SESSION['username'])) {
 
     
     <div class="centriranje">
-        <!-- lični podaci -->
+    <!-- lični podaci -->
         <h2 id="podaci">Lični podaci</p>
         <?php
         $sql = "SELECT * FROM korisnik WHERE username='".$username."'";
@@ -81,7 +81,6 @@ if (empty($_SESSION['username'])) {
         ?>
         <a href="updateAcc.php" class="sideA" style="text-align: center; font-size: 20px; color: black; text-shadow: white 0px 0px 10px;">IZMENI PODATKE</a> 
         <a href="deleteAcc.php" class="sideA" style="text-align: center; font-size: 20px; color: black; text-shadow: white 0px 0px 10px;">OBRIŠI NALOG</a> 
-    <!-- <a href="deleteAcc.php" class="sideA" style="text-align: center; font-size: 10px;">OBRIŠI</a> -->
     
     <!-- rezervacije -->
         <h2 id="rezervacije">Rezervacije</h2>

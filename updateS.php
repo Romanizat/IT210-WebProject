@@ -12,13 +12,13 @@
 
 <?php
     if(($id!=0) && ($mesto !="") && ($zasto !="")){
-        $stmt = $con->prepare("UPDATE locationsuggest SET mesto=:mesto, zasto=:zasto WHERE id=:id");
+        $stmt = $con->prepare("UPDATE locationsuggest SET mesto=:mesto, zasto=:zasto WHERE idL=:id");
         $stmt->bindParam(':mesto', $mesto);
         $stmt->bindParam(':zasto',$zasto);
         $stmt->bindParam(':id',$id);
         $stmt->execute();
         header('Location: profil.php');
     }else {
-        header('Location: updateRes.php');
+        header('Location: updateSug.php');
     }
 ?>
