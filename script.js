@@ -56,7 +56,6 @@ function proveraContact (){
   }else{
       window.alert("Hvala na poruci!");
       return true;
-      document.getElementsByName("formica").reset();
   }
 }
 

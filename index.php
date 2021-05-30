@@ -1,10 +1,6 @@
 <?php
 require_once("connect.php");
 session_start();
-/*if(!isset($_SESSION['username'])){
-    $username = $_SESSION['username'];
-    $ime = $_SESSION['ime'];
-	}*/
 ?>
 
 <!DOCTYPE html>
@@ -125,12 +121,6 @@ session_start();
 
   ?>
 
-
-  <!-- EMPTY TRENUTNO -->
-  <div class="centriranje">
-    <p class="fade-in" id="p1"></p>
-    <p class="fade-in2" id="p2"></p>
-  </div>
   <footer>
     <p class="fade-in3">© Marko Josifović 4494</p>
   </footer>

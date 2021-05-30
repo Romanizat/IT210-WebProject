@@ -62,9 +62,8 @@ if (empty($_SESSION['username'])) {
     }
     ?>
 
-    
     <div class="centriranje">
-    <!-- lični podaci -->
+
         <h2 id="podaci">Lični podaci</p>
         <?php
         $sql = "SELECT * FROM korisnik WHERE username='".$username."'";
@@ -81,8 +80,7 @@ if (empty($_SESSION['username'])) {
         ?>
         <a href="updateAcc.php" class="sideA" style="text-align: center; font-size: 20px; color: black; text-shadow: white 0px 0px 10px;">IZMENI PODATKE</a> 
         <a href="deleteAcc.php" class="sideA" style="text-align: center; font-size: 20px; color: black; text-shadow: white 0px 0px 10px;">OBRIŠI NALOG</a> 
-    
-    <!-- rezervacije -->
+
         <h2 id="rezervacije">Rezervacije</h2>
         <?php
         $sql = "SELECT * FROM rezervacije r, event e WHERE r.idKorisnik='".$idKorisnik."' AND e.id=r.idEvent";
@@ -100,8 +98,6 @@ if (empty($_SESSION['username'])) {
     <a href="updateRes.php" class="sideA" style="font-weight: bold; text-align: center; font-size: 20px; color: black; text-shadow: white 0px 0px 10px;">IZMENI REZERVACIJU</a> 
     <a href="deleteRes.php" class="sideA" style="font-weight: bold; text-align: center; font-size: 20px; color: black; text-shadow: white 0px 0px 10px;">OBRIŠI REZERVACIJU</a> 
 
-        
-    <!-- predlozi -->
     <h2 id="predlozi">Predlozi</h2>
         <?php
         $sql = "SELECT * FROM locationsuggest l WHERE idKorisnik='".$idKorisnik."'";

@@ -89,8 +89,7 @@ if ($admin != 1) {
     ?>
 
 <div class="centriranjeBody">
-    <!-- nalozi -->
-    <h2 id="korisnici">Korisnici</p>
+        <h2 id="korisnici">Korisnici</p>
         <?php
         $sql = "SELECT * FROM korisnik";
         $result = $con->query($sql);
@@ -109,7 +108,6 @@ if ($admin != 1) {
         echo "</table>";
         ?>
 
-        <!-- rezervacije -->
         <h2 id="rezervacije">Rezervacije</h2>
         <?php
         $sql = "SELECT * FROM rezervacije r, event e, korisnik k WHERE (e.id=r.idEvent AND k.id=r.idKorisnik)";
@@ -131,9 +129,6 @@ if ($admin != 1) {
         echo "</table>";
         ?>
         
-
-
-        <!-- predlozi -->
         <h2 id="predlozi">Predlozi</h2>
         <?php
         $sql = "SELECT * FROM locationsuggest l, korisnik k WHERE k.id=l.idKorisnik;";
@@ -149,6 +144,31 @@ if ($admin != 1) {
         <td>". $row["zasto"] . "</td>
         <td>". $row["username"] . "</td>
         <td>". "<a class=\"sideA\" href=\"deleteSugAdmin.php?id=" . $row["idL"] . "\">Obriši</a>" . "</td></tr>";
+        }
+        echo "</table>";
+        ?>
+
+        <h2 id="poruke">Kontakt poruke</h2>
+        <?php
+        $sql = "SELECT * FROM kontakt k;";
+        $result = $con->query($sql);
+        echo "<hr>";
+        echo "<table border=1>
+        <th>Ime</th>
+        <th>Prezime</th>
+        <th>Naslov</th>
+        <th>Poruka</th>
+        <th>Telefon</th>
+        <th>Kome</th>";
+
+        while ($row = $result->fetch()) {
+        echo "<tr><td>" . "$row[ime]" . "</td>
+        <td>". $row["prezime"] . "</td>
+        <td>". $row["naslov"] . "</td>
+        <td>". $row["poruka"] . "</td>
+        <td>". $row["telefon"] . "</td>
+        <td>". $row["kome"] . "</td>
+        <td>". "<a class=\"sideA\" href=\"deleteMsgAdmin.php?id=" . $row["id"] . "\">Obriši</a>" . "</td></tr>";
         }
         echo "</table>";
         ?>

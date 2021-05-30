@@ -1,10 +1,6 @@
 <?php
   require_once("connect.php");
   session_start();
-  /*if(!isset($_SESSION['username'])){
-    $username = $_SESSION['username'];
-    $ime = $_SESSION['ime'];
-	}*/
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="resources/favicon.png" />
     <link rel="stylesheet" href="style.css">
-    <title>Kontakt</title>
+    <title>Umami | Kontakt</title>
 </head>
 
 <body>
