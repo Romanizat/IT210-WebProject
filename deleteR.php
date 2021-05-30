@@ -10,6 +10,6 @@ $stmt = $con->prepare("DELETE FROM rezervacije WHERE idR=:idR");
 $stmt->bindParam(":idR", $idRes);
 $stmt->execute();
 
-header('Location: profil.php');
+header('Location: profil.php#rezervacije');
 
 ?>

@@ -21,7 +21,7 @@
 	$data = $sql->execute();
 	
 	if($data){
-		header("Location: kontakt.html");
+		header("Location: kontakt.php");
 	}
 	else{
 		echo "Greška prilikom slanja!";

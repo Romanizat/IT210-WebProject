@@ -10,6 +10,6 @@ $stmt = $con->prepare("DELETE FROM locationsuggest WHERE id=:id");
 $stmt->bindParam(":id", $idPredloga);
 $stmt->execute();
 
-header('Location: profil.php');
+header('Location: profil.php#predlozi');
 
 ?>

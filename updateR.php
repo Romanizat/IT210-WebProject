@@ -15,7 +15,7 @@
         $stmt->bindParam(':kolicina', $kolicina);
         $stmt->bindParam(':id',$idRes);
         $stmt->execute();
-        header('Location: profil.php');
+        header('Location: profil.php#rezervacije');
     }else {
         header('Location: updateRes.php');
     }

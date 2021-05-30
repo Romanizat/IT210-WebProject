@@ -65,7 +65,7 @@ if (empty($_SESSION['username'])) {
     
     <div class="centriranje">
         <!-- lični podaci -->
-        <h2>Lični podaci</p>
+        <h2 id="podaci">Lični podaci</p>
         <?php
         $sql = "SELECT * FROM korisnik WHERE username='".$username."'";
         $result = $con->query($sql);
@@ -84,7 +84,7 @@ if (empty($_SESSION['username'])) {
     <!-- <a href="deleteAcc.php" class="sideA" style="text-align: center; font-size: 10px;">OBRIŠI</a> -->
     
     <!-- rezervacije -->
-        <h2 id="#rezervacije">Rezervacije</h2>
+        <h2 id="rezervacije">Rezervacije</h2>
         <?php
         $sql = "SELECT * FROM rezervacije r, event e WHERE r.idKorisnik='".$idKorisnik."' AND e.id=r.idEvent";
         $result = $con->query($sql);
@@ -103,7 +103,7 @@ if (empty($_SESSION['username'])) {
 
         
     <!-- predlozi -->
-    <h2 id="#predlozi">Predlozi</h2>
+    <h2 id="predlozi">Predlozi</h2>
         <?php
         $sql = "SELECT * FROM locationsuggest l WHERE idKorisnik='".$idKorisnik."'";
         $result = $con->query($sql);

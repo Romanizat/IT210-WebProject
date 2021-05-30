@@ -20,7 +20,7 @@
         $stmt->bindParam(":mesto", $mesto);
         $stmt->bindParam(":zasto", $zasto);
         $stmt->execute();
-        header('Location: profil.php');
+        header('Location: profil.php#predlozi');
 
     }else {
         header('Location: location.php');

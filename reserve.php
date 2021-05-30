@@ -33,7 +33,7 @@
         $stmt->bindParam(":idKorisnik", $idKorisnik);
         $stmt->bindParam(":idEvent", $idEvent);
         $stmt->execute();
-        header('Location: profil.php');
+        header('Location: profil.php#rezervacije');
         }catch(PDOException $ex){
            echo "Handle-ovanje kada isti korisnik pokusa da rezervise za isti event";
            header('Location: rezervacijaPg.php');

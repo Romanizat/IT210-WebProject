@@ -65,7 +65,7 @@ if (empty($_SESSION['username'])) {
         <form method="POST" action="suggest.php" style="text-align: center;">
             <h2>Predložite novu lokaciju!</h2>
             <label for="msg">Unesite mesto i državu</label><br><br>
-            <textarea style="resize: none;" name="mesto" cols="50" rows="5" placeholder="Napišite naziv mesta i državu kog biste predložili za sledeći događaj" required></textarea><br><br>
+            <textarea style="resize: none;" name="mesto" cols="50" rows="5" placeholder="Napišite naziv mesta i državu koje biste predložili za sledeći događaj" required></textarea><br><br>
             <label for="zasto">Zašto?</label><br><br>
             <textarea style="resize: none;" name="zasto" cols="50" rows="5" placeholder="Zašto baš predlažete ovo mesto?" required></textarea><br><br>
             <input type="submit" value="Pošalji!">
