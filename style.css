@@ -313,10 +313,10 @@ span.adminButtons{
     background-color: #dc54f7;
     color: white;
     cursor: pointer;
-    padding: 15px;
+    padding: 5px;
     border-radius: 10px;
     font-size: 20px;
-    margin-right: 200px;
+    margin-right: 50px;
 }
 
 span.adminButtons:hover{
@@ -326,6 +326,13 @@ span.adminButtons:hover{
     position: absolute;
     left: 32%;
 }
+
+.adminButtonsParent2{
+    position: absolute;
+    left: 29%;
+    top: 30%;
+}
+
 
 .bgImg{
     z-index: -1;

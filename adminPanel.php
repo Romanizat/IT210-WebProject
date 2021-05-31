@@ -47,8 +47,16 @@ if ($admin != 1) {
 
     <div class="adminButtonsParent">
         <span class="adminButtons"><a href="adminCreateEvent.php">Dodaj event</a></span>
-        <span class="adminButtons"><a href="adminCreateUmetnik.php">Dodaj umetnika</a></span>
+        <span class="adminButtons"><a href="adminEditEvent.php">Izmeni event</a></span>
+        <span class="adminButtons"><a href="adminDeleteEvent.php">Obriši event</a></span>
+        
     </div>
+    <div class="adminButtonsParent2">
+        <span class="adminButtons"><a href="adminCreateUmetnik.php">Dodaj umetnika</a></span>
+        <span class="adminButtons"><a href="adminEditUmetnik.php">Izmeni umetnika</a></span>
+        <span class="adminButtons"><a href="adminDeleteUmetnik.php">Obriši umetnika</a></span>
+    </div>
+
 
 
 
