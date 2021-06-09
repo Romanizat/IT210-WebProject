@@ -30,7 +30,7 @@
         </ul>
     </nav>
 
-    <video autoplay muted loop id="bgVideo" src="resources/bokeh.mp4" type="video/mp4">
+    <video autoplay muted loop id="bgVideo" src="resources/Pexels Videos 2759484.mp4" type="video/mp4">
     </video>
 
     <?php
